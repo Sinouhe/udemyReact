@@ -4,14 +4,13 @@ class SearchBar extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {serachText:'', placeHolder:'Tapez cotre film...'}
+        this.state = {serachText: '', placeHolder: 'Tapez cotre film...'}
     }
 
     render() {
         return (
             <div>
                 <input onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder}/>
-                <p>{this.state.searchText}</p>
             </div>
         )
     }    

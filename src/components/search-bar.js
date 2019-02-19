@@ -9,14 +9,18 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <input onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder}/>
+            <div className='row'>
+                <div className='col-md-8'>
+                    <input  className='form-control input-lg'
+                            onChange={this.handleChange.bind(this)}
+                            type='test' 
+                            placeholder={this.state.placeHolder}/>
+                    </div>
             </div>
         )
     }    
 
     handleChange(event) {
-        console.log(event.target.value);
         this.setState({searchText:event.target.value});
     }
 }
